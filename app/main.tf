@@ -1,5 +1,15 @@
 provider "azurerm" {
-  version = "=1.39.0"
+  features {}
+}
+#  Terraform Settings Block
+terraform {
+  #  Required Terraform Providers  
+  required_providers {
+    azurerm   = {
+      source  = "hashicorp/azurerm"
+      version = "2.56.0"
+    }
+  }
 }
 terraform {
     backend "azurerm" {
